@@ -4,7 +4,7 @@ Codes for the paper "A Weakly Supervised Method for Topic Segmentation and Label
 
 Cite this paper:
 ```
-@inproceedings{takanobu2018weekly
+@inproceedings{takanobu2018weakly
   title={A Weakly Supervised Method for Topic Segmentation and Labeling in Goal-oriented Dialogues via Reinforcement Learning},
   author={Takanobu, Ryuichi and Huang, Minlie and Zhao, Zhongzhou and Li, Fenglin and Chen, Haiqing and Zhu, Xiaoyan and Nie, Liqiang},
   booktitle={IJCAI-ECAI},
@@ -14,7 +14,44 @@ Cite this paper:
 
 ## Data Format
 
-**update later**
+**Note:** Since the dialogue datasets used in the paper derive from an E-commerce services platform, to protect users' privacy concerns, we are sorry that the datasets will not be published at present. So, we provide the data format instead here for others to use our codes with their own corpus.
+
+As can be seen in the directory `./code/example`, the data required for the model are separated into 7 files:
+
+### my_vector
+
+This file contains the word embedding vector for the datasets. Each row consists of a floating point array of length `embed_units`, and there are `symbols` rows in all .
+
+### XXX.csv
+
+The main data. The file contains multiple dialogue sessions in the following format:
+
+```
+N,
+label_1, data_1
+label_2, data_2
+...
+label_N, data_N
+```
+
+where `label_i` is the topic category for the ith sentence `data_i` (The labels of training/validation data are obtained according to `3.1 Noisy Labeling with Prior Knowledge` in the paper, which are noisy)
+
+The words of ith sentence (i.e. `data_i`) is in the form of `string`, which are concatenated with `/` signs, and each word is replaced by its index in `my_vector` file.
+
+### keywords_XXX
+
+The file contains the related keywords information for each dialogue sessions:
+
+```
+key_1, value_1
+key_2, value_2
+...
+key_N, value_N
+```
+
+where `key_i` is the topic category assigned by `keyword matching` but without `nearest neighboring` (see `3.1 Noisy Labeling with Prior Knowledge` for details), and `value_i` for the corresponding frequency value (i.e. The keywords of topic `key_i`have appeared `value_i` times in the sentence `data_i`.)
+
+If a sentence contains no keyword, or there are two topic categories that both's keywords appear most times in a sentence, `key_i`will be set to `-1`. In this case, the `value_i` is also set to `-1`.
 
 ## Run
 
