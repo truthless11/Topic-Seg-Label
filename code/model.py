@@ -71,7 +71,7 @@ with tf.Session(config=config) as sess:
     if not FLAGS.is_train:
         obs_test = inference_srn(SRN, sess_srn, label_test, text_test, sentence_len_test, FLAGS.test_filename)
         inference_pn(PN, sess_pn, obs_test, sentence_len_test, keyword_test, FLAGS.test_filename)
-        exit
+        exit()
     
 ##################################################################
     
