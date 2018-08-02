@@ -8,6 +8,7 @@ Cite this paper:
   title={A Weakly Supervised Method for Topic Segmentation and Labeling in Goal-oriented Dialogues via Reinforcement Learning},
   author={Takanobu, Ryuichi and Huang, Minlie and Zhao, Zhongzhou and Li, Fenglin and Chen, Haiqing and Zhu, Xiaoyan and Nie, Liqiang},
   booktitle={IJCAI-ECAI},
+  pages={4403--4410},
   year={2018}
 }
 ```

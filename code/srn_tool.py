@@ -43,7 +43,7 @@ def evaluate_srn(model, sess, label, text, batch_sizes):
 
 def inference_srn(model, sess, label, text, batch_sizes, part):
     st, ed, cnt = 0, 0, 0
-    hidden_states = np.zeros([len(label), FLAGS.units], dtype=np.float32)
+    hidden_states = np.zeros([len(label), FLAGS.hidden_units], dtype=np.float32)
     while ed < len(label):
         st, ed, cnt = ed, ed+batch_sizes[cnt], cnt+1
         batch_data = gen_batch_data(label[st:ed], text[st:ed])
