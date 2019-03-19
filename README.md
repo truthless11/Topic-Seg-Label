@@ -1,10 +1,10 @@
 # Topic-Seg-Label
 
-Codes for the paper "A Weakly Supervised Method for Topic Segmentation and Labeling in Goal-oriented Dialogues via Reinforcement Learning"
+Codes for the paper "A Weakly Supervised Method for Topic Segmentation and Labeling in Goal-oriented Dialogues via Reinforcement Learning", and you can find our paper at [here](https://doi.org/10.24963/ijcai.2018/612)
 
 Cite this paper:
 ```
-@inproceedings{takanobu2018weakly
+@inproceedings{takanobu2018weakly,
   title={A Weakly Supervised Method for Topic Segmentation and Labeling in Goal-oriented Dialogues via Reinforcement Learning},
   author={Takanobu, Ryuichi and Huang, Minlie and Zhao, Zhongzhou and Li, Fenglin and Chen, Haiqing and Zhu, Xiaoyan and Nie, Liqiang},
   booktitle={IJCAI-ECAI},

@@ -4,7 +4,7 @@
 @e-mail: gxly15@mails.tsinghua.edu.cn; truthless11@gmail.com
 """
 import numpy as np
-from parser import FLAGS
+from parse import FLAGS
 
 def similarity(A, B):
     return np.dot(A, B) / (np.linalg.norm(A) * np.linalg.norm(B))

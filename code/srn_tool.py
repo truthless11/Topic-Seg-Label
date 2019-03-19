@@ -4,7 +4,7 @@
 @e-mail: gxly15@mails.tsinghua.edu.cn; truthless11@gmail.com
 """
 import numpy as np
-from parser import FLAGS
+from parse import FLAGS
 
 def gen_batch_data(labels, text):
     def padding(sent, length):

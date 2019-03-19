@@ -6,7 +6,7 @@
 import numpy as np
 import tensorflow as tf
 import time
-from parser import FLAGS, load_data, build_embed
+from parse import FLAGS, load_data, build_embed
 from srn import HLSTM
 from srn_tool import train_srn, evaluate_srn, inference_srn
 from pn import PolicyGradient
